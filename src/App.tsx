@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as Dapp from '@elrondnetwork/dapp';
+import { network, walletConnectBridge, walletConnectDeepLink } from './config';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Dashboard from './componetns/Dashboard/Dashboard';
+import Unlock from './componetns/Unlock';
+import WalletConnect from './componetns/WalletConnect';
+import Ledger from './componetns/Ledger';
+import Home from './componetns/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Dapp.Context
+      config={{
+        network,
+        walletConnectBridge,
+        walletConnectDeepLink,
+      }}
+    >
+      <Router>
+        <Switch>
+          <Route path='/unlock' exact>
+            <Unlock />
+          </Route>
+          <Route path='/ledger' exact>
+            <Ledger />
+          </Route>
+          <Route path='/walletconnect' exact>
+            <WalletConnect />
+          </Route>
+          <Route path='/dashboard' component={Dashboard} exact />
+          <Route path='/' component={Home} exact />
+        </Switch>
+      </Router>
+    </Dapp.Context>
   );
 }
 
