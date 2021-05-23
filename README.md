@@ -13,8 +13,8 @@ Elven Tools is a replication of NFTs creation functionality only on the testnet.
 
 ### What you need to play with it
 
-1. Create you wallet address using the testnet. You can do this here: [testnet-wallet.elrond.com](https://testnet-wallet.elrond.com/)
-2. Your would also need some xEGLD. Go to the [Elrond Testnet Faucet](https://r3d4.fr/elrond/testnet) (I guess not an official tool, but it works well). Take as much as you can because there are limitations for one address. You can always create another one.
+1. Create your wallet address using the testnet. You can do this here: [testnet-wallet.elrond.com](https://testnet-wallet.elrond.com/)
+2. You would also need some xEGLD. Go to the [Elrond Testnet Faucet](https://r3d4.fr/elrond/testnet) (I guess not an official tool, but it works well). Take as much as you can because there are limitations for one address. You can always create another one.
 3. With wallet address and some xEGLD you can start playing with Elven Tools
 
 ### What's next
