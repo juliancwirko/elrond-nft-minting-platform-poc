@@ -2,19 +2,19 @@
 
 [elven.tools](https://www.elven.tools)
 
-This app is a result of learning and playing with [Elrond](https://elrond.com/) blockchain and its [tooling](https://github.com/ElrondNetwork)
+This app is a result of learning and playing with [Elrond](https://elrond.com/) blockchain and its [tooling](https://github.com/ElrondNetwork).
 
-Elven Tools is a replication of NFTs creation functionality only on the testnet. Using it, you can issue ESDT tokens for NFTs, create NFTs, upload images to IPFS, showing already created NFTs and transactions. All done using React tools from Elrond, which are in early stage, but I am impressed that I was able to build a lot.
+Elven Tools is a replication of NFTs creation functionality only on the testnet. Using it, you can issue ESDT tokens for NFTs, create NFTs, upload images to IPFS, showing already created NFTs and transactions. All done using React tools from Elrond, which are in the early stage, but I am impressed that I could build a lot.
 
 ### Tooling
 
 1. Elrond tooling. Mainly [React tools](https://www.npmjs.com/package/@elrondnetwork/dapp), and [JavaScript SDK](https://www.npmjs.com/package/@elrondnetwork/erdjs).
-2. IPFS based tooling - The app takes any URL for the asset. The best is to use [NFT.storage](https://nft.storage/) - free, decentralized storage, and bandwidth for NFTs on [IPFS](https://ipfs.io/) and [Filecoin](https://filecoin.io/). I think we should store NFTs files in a decentralized way. It should provide a pinning service as well.
+2. IPFS based tooling - The app takes any URL for the asset. The best is to use [NFT.storage](https://nft.storage/) - free, decentralized storage and bandwidth for NFTs on [IPFS](https://ipfs.io/) and [Filecoin](https://filecoin.io/). Let's store NFTs files in a decentralized way. It should provide a pinning service as well.
 
 ### What you need to play with it
 
 1. Create you wallet address using the testnet. You can do this here: [testnet-wallet.elrond.com](https://testnet-wallet.elrond.com/)
-2. You would also need some xEGLD to play with. Go to the [Elrond Testnet Faucet](https://r3d4.fr/elrond/testnet) (I guess not official tool, but it works well). Take as much as you can, because there are limitations for one address. You can always create another one.
+2. Your would also need some xEGLD. Go to the [Elrond Testnet Faucet](https://r3d4.fr/elrond/testnet) (I guess not an official tool, but it works well). Take as much as you can because there are limitations for one address. You can always create another one.
 3. With wallet address and some xEGLD you can start playing with Elven Tools
 
 ### What's next
@@ -29,4 +29,4 @@ I would like to have much more docs. Like detailed erdjs SDK documentation, goin
 - julian.cwirko@gmail.com
 - [https://twitter.com/JulianCwirko](twitter.com/juliancwirko)
 
-#### Until I figure out and learn couple of more things, there are no plans to run it on the mainnet, but who knows, maybe in the future.
+#### Until I figure out and learn a couple of more things, there are no plans to run it on the mainnet, but who knows, maybe in the future.

@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <Paragraph marginBottom={30}>
           This app is a result of learning and playing with{' '}
           <Link href='https://elrond.com/'>Elrond</Link> blockchain and its{' '}
-          <Link href='https://github.com/ElrondNetwork'>tooling</Link> .
+          <Link href='https://github.com/ElrondNetwork'>tooling</Link>.
         </Paragraph>
 
         <Paragraph marginBottom={30}>
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           the testnet. Using it, you can issue ESDT tokens for NFTs, create
           NFTs, upload images to IPFS, showing already created NFTs and
           transactions. All done using React tools from Elrond, which are in
-          early stage, but I am impressed that I was able to build a lot.
+          the early stage, but I am impressed that I could build a lot.
         </Paragraph>
 
         <Heading>Tooling:</Heading>
@@ -48,14 +48,14 @@ const Home: React.FC = () => {
           <Link href='https://nft.storage/'>NFT.storage</Link> free,
           decentralized storage, and bandwidth for NFTs on{' '}
           <Link href='https://ipfs.io/'>IPFS</Link> and{' '}
-          <Link href='https://filecoin.io/'>Filecoin</Link>. I think we should
+          <Link href='https://filecoin.io/'>Filecoin</Link>. Let's
           store NFTs files in a decentralized way. It should provide a pinning
           service as well.
         </Paragraph>
 
         <Heading>What you need to play with it:</Heading>
         <Paragraph>
-          1. Create you wallet address using the testnet. You can do this here:{' '}
+          1. Create your wallet address using the testnet. You can do this here:{' '}
           <Link href='https://testnet-wallet.elrond.com/'>
             testnet-wallet.elrond.com
           </Link>
@@ -65,8 +65,8 @@ const Home: React.FC = () => {
           <Link href='https://r3d4.fr/elrond/testnet'>
             Elrond Testnet Faucet
           </Link>{' '}
-          (I guess not official tool, but it works well). Take as much as you
-          can, because there are limitations for one address. You can always
+          (I guess not an official tool, but it works well). Take as much as you
+          can because there are limitations for one address. You can always
           create another one.
         </Paragraph>
         <Paragraph marginBottom={30}>
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
         </Paragraph>
 
         <Heading size={500}>
-          Until I figure out and learn couple of more things, there are no plans
+          Until I figure out and learn a couple of more things, there are no plans
           to run it on the mainnet, but who knows, maybe in the future.
         </Heading>
       </Pane>
