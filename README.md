@@ -1,6 +1,7 @@
 ## Elven Tools
 
 [elven.tools](https://www.elven.tools)
+[Quick walkthrough video](https://youtu.be/EyND_L37Pac)
 
 This app is a result of learning and playing with [Elrond](https://elrond.com/) blockchain and its [tooling](https://github.com/ElrondNetwork).
 

@@ -26,10 +26,24 @@ const Home: React.FC = () => {
         <Paragraph marginBottom={30}>
           Elven Tools is a replication of NFTs creation functionality only on
           the testnet. Using it, you can issue ESDT tokens for NFTs, create
-          NFTs, displaying already created NFTs and
-          transactions. All done using React tools from Elrond, which are in
-          the early stage, but I am impressed that I could build a lot.
+          NFTs, displaying already created NFTs and transactions. All done using
+          React tools from Elrond, which are in the early stage, but I am
+          impressed that I could build a lot.
         </Paragraph>
+
+        <Pane marginBottom={30}>
+          <Pane maxWidth={560} width="100%">
+            <iframe
+              width='100%'
+              height='315'
+              src='https://www.youtube.com/embed/EyND_L37Pac'
+              title='YouTube video player'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            ></iframe>
+          </Pane>
+        </Pane>
 
         <Heading>Tooling:</Heading>
         <Paragraph>
@@ -44,13 +58,13 @@ const Home: React.FC = () => {
           .
         </Paragraph>
         <Paragraph marginBottom={30}>
-          2. IPFS based tooling - The app takes any URL for the asset. The best is to use{' '}
-          <Link href='https://nft.storage/'>NFT.storage</Link> free,
+          2. IPFS based tooling - The app takes any URL for the asset. The best
+          is to use <Link href='https://nft.storage/'>NFT.storage</Link> free,
           decentralized storage, and bandwidth for NFTs on{' '}
           <Link href='https://ipfs.io/'>IPFS</Link> and{' '}
-          <Link href='https://filecoin.io/'>Filecoin</Link>. Let's
-          store NFTs files in a decentralized way. It should provide a pinning
-          service as well.
+          <Link href='https://filecoin.io/'>Filecoin</Link>. Let's store NFTs
+          files in a decentralized way. It should provide a pinning service as
+          well.
         </Paragraph>
 
         <Heading>What you need to play with it:</Heading>
@@ -117,8 +131,8 @@ const Home: React.FC = () => {
         </Paragraph>
 
         <Heading size={500}>
-          Until I figure out and learn a couple of more things, there are no plans
-          to run it on the mainnet, but who knows, maybe in the future.
+          Until I figure out and learn a couple of more things, there are no
+          plans to run it on the mainnet, but who knows, maybe in the future.
         </Heading>
       </Pane>
     </MainLayout>
