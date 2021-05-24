@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         <Paragraph marginBottom={30}>
           Elven Tools is a replication of NFTs creation functionality only on
           the testnet. Using it, you can issue ESDT tokens for NFTs, create
-          NFTs, upload images to IPFS, showing already created NFTs and
+          NFTs, displaying already created NFTs and
           transactions. All done using React tools from Elrond, which are in
           the early stage, but I am impressed that I could build a lot.
         </Paragraph>

@@ -4,7 +4,7 @@
 
 This app is a result of learning and playing with [Elrond](https://elrond.com/) blockchain and its [tooling](https://github.com/ElrondNetwork).
 
-Elven Tools is a replication of NFTs creation functionality only on the testnet. Using it, you can issue ESDT tokens for NFTs, create NFTs, upload images to IPFS, showing already created NFTs and transactions. All done using React tools from Elrond, which are in the early stage, but I am impressed that I could build a lot.
+Elven Tools is a replication of NFTs creation functionality only on the testnet. Using it, you can issue ESDT tokens for NFTs, create NFTs, displaying already created NFTs and transactions. All done using React tools from Elrond, which are in the early stage, but I am impressed that I could build a lot.
 
 ### Tooling
 
