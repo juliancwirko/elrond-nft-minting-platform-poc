@@ -22,7 +22,7 @@ Elven Tools is a replication of NFTs creation functionality only on the testnet.
 I would like to have much more docs. Like detailed erdjs SDK documentation, going through many different docs and codebase burns a lot of time. Of course, I understand that everything takes time, and we will get those soon. I want to shape Elven Tools to be responsible for NFTs minting and sending. It would be good to hide the ESDT token issuance. I want to make it work with different user accounts. The UX should be more straightforward and better looking. There are also too many transaction confirmations, and probably we can do something with that. There will be a couple of bugs for sure. It may also lack some error handling in some places, so some work is needed here too.
 
 ### Things I don't know yet
-- It would be good to integrate some tooling for uploads, NFT.storage is nice, but every user should use a separate account. Bare IPFS needs pinning service anyway.
+- It would be good to integrate some tooling for uploads, NFT.storage is nice, but every user should use a separate account. Bare IPFS is ok, but it needs pinning service anyway.
 - Preferably, I would like to use only JavaScript SDK, with custom React implementation, but at this moment, I didn't want to spend more time checking how much work is required
 - There is a lot of questions, and documentation is lacking some information about especially JavaScript SDK
 

@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         </Paragraph>
 
         <Pane marginBottom={30}>
-          <Pane maxWidth={560} width="100%">
+          <Pane maxWidth={560} width='100%'>
             <iframe
               width='100%'
               height='315'
@@ -105,15 +105,15 @@ const Home: React.FC = () => {
         <Heading>Things I don't know yet:</Heading>
         <Paragraph>
           - It would be good to integrate some tooling for uploads, NFT.storage
-          is nice, but every user should use a separate account. Bare IPFS needs
-          pinning service anyway.
+          is nice, but every user should use a separate account. Bare IPFS is
+          ok, but it needs pinning service anyway.
         </Paragraph>
-        <Paragraph marginBottom={30}>
+        <Paragraph>
           - Preferably, I would like to use only JavaScript SDK, with custom
           React implementation, but at this moment, I didn't want to spend more
           time checking how much work is required
         </Paragraph>
-        <Paragraph>
+        <Paragraph marginBottom={30}>
           There is a lot of questions, and documentation is lacking some
           information about especially JavaScript SDK
         </Paragraph>
