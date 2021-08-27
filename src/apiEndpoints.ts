@@ -11,4 +11,4 @@ export const getTransactions = (
   `${network.apiAddress}/transactions?sender=${senderAddress}&receiver=${senderAddress}&condition=should&from=${from}&size=${size}`;
 
 export const getNfts = (walletAddress: string) =>
-  `${network.apiAddress}/accounts/${walletAddress}/tokens`;
+  `${network.apiAddress}/accounts/${walletAddress}/nfts`;

@@ -35,7 +35,7 @@ export const issueNft = (data: IssueNFTData) =>
     receiver: new Address(
       'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqzllls8a5w6u'
     ),
-    value: Balance.egld('5'),
+    value: Balance.egld('0.05'),
     data: new TransactionPayload(
       `issueNonFungible@${stringToHex(data.tokenName)}@${stringToHex(
         data.tokenTicker

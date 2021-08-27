@@ -10,7 +10,7 @@ const NftListTab = () => {
   const [pending, setPending] = useState(false);
 
   const smallRes = useMediaQuery({
-    query: '(max-width: 860px)'
+    query: '(max-width: 860px)',
   });
 
   const mounted = useRef(true);
@@ -54,8 +54,11 @@ const NftListTab = () => {
               key={index}
             >
               <Heading>{nft.name}</Heading>
+              <Pane>
+                <Text fontSize={12}>Collection: {nft.collection}</Text>
+              </Pane>
               <Pane marginBottom={10}>
-                <Text fontSize={12}>(Token: {nft.token})</Text>
+                <Text fontSize={12}>Id: {nft.identifier}</Text>
               </Pane>
               <Pane is='a' href={atob(nft.uris[0])}>
                 <Pane
@@ -68,9 +71,7 @@ const NftListTab = () => {
             </Pane>
           ))
         )}
-        {!pending && nfts.length === 0 && (
-          <Text>There are no NFTs yet.</Text>
-        )}
+        {!pending && nfts.length === 0 && <Text>There are no NFTs yet.</Text>}
       </Pane>
     </Pane>
   );

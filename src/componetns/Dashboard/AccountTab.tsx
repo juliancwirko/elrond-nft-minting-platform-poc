@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { UI } from '@elrondnetwork/dapp-utils';
 import {
   Pane,
   Heading,
@@ -76,8 +77,7 @@ const AccountTab = () => {
             Your wallet balance:
           </Heading>
           <Paragraph>
-            {/* TODO: better denomination */}
-            {account.balance / 1000000000000000000} {egldLabel}
+            <UI.Denominate value={account.balance} erdLabel="xEGLD" />
           </Paragraph>
         </Pane>
       </Pane>
