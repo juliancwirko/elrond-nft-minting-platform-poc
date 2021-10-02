@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
-import { Pane, Heading, Paragraph, TextInputField, Button } from 'evergreen-ui';
+import React, { useState, useEffect } from 'react';
+import {
+  Pane,
+  Heading,
+  Paragraph,
+  TextInputField,
+  Button,
+  SelectField,
+} from 'evergreen-ui';
 import { useMediaQuery } from 'react-responsive';
+import { nftCollections } from '../../apiEndpoints';
 import { issueNft, createNFT } from '../../transactions';
 import * as Dapp from '@elrondnetwork/dapp';
 
 const CreateNftTab = () => {
+  const [collections, setCollections] = useState<string[]>([]);
   const { address } = Dapp.useContext();
   const sendTransaction = Dapp.useSendTransaction();
   const [ipfsImageUri, setIpfsImage] = useState('');
@@ -30,6 +39,15 @@ const CreateNftTab = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const fetchFn = async () => {
+      const response = await fetch(nftCollections(address));
+      const data = await response.json();
+      setCollections(data.map((item: any) => item.collection));
+    };
+    fetchFn();
+  }, []);
 
   const createNFTToken = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -62,7 +80,7 @@ const CreateNftTab = () => {
       >
         <Pane marginBottom={30}>
           <Heading size={600} marginBottom={5}>
-            1. Issue ESDT Token for NFT usage
+            1. Issue ESDT Token for NFT usage (Create a NFT collection)
           </Heading>
           <Paragraph>
             You would need to mint an ESDT token to create NFTs on top of that.
@@ -113,16 +131,23 @@ const CreateNftTab = () => {
         </Pane>
         <Pane marginBottom={50} maxWidth={400} width="100%">
           {/* TODO: add all inputs: multiple Uri, Hash, Royalties, Attributes */}
-          <TextInputField
+          <SelectField
             name="tokenIdentifier"
             placeholder="example: TOKE-34562"
-            label="Token identifier"
+            label="Token identifier (collection)"
             required
             description="Identifier of your ESDT token for this NFT"
             value={tokenIdentifier}
             hint="Must be between 3 - 10 characters long. Alphanumeric characters only"
             onChange={(e: any) => setTokenIdentifier(e.target.value)}
-          />
+          >
+            {collections.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </SelectField>
+
           <TextInputField
             name="nftName"
             placeholder="example: MyNFTName"
