@@ -60,14 +60,16 @@ const NftListTab = () => {
               <Pane marginBottom={10}>
                 <Text fontSize={12}>Id: {nft.identifier}</Text>
               </Pane>
-              <Pane is="a" href={atob(nft.uris[0])}>
-                <Pane
-                  is="img"
-                  src={atob(nft.uris[0])}
-                  maxWidth="100%"
-                  width="auto"
-                />
-              </Pane>
+              {nft.uris?.[0] && (
+                <Pane is="a" href={atob(nft.uris[0])}>
+                  <Pane
+                    is="img"
+                    src={atob(nft.uris[0])}
+                    maxWidth="100%"
+                    width="auto"
+                  />
+                </Pane>
+              )}
             </Pane>
           ))
         )}
