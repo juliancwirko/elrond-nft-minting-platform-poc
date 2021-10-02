@@ -141,6 +141,7 @@ const CreateNftTab = () => {
             hint="Must be between 3 - 10 characters long. Alphanumeric characters only"
             onChange={(e: any) => setTokenIdentifier(e.target.value)}
           >
+            <option value="">-</option>
             {collections.map((item) => (
               <option key={item} value={item}>
                 {item}
