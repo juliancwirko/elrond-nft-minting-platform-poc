@@ -1,7 +1,9 @@
-import * as Dapp from "@elrondnetwork/dapp";
+import * as Dapp from '@elrondnetwork/dapp';
 
-export const walletConnectBridge: string = process.env.REACT_APP_WALLET_CONNECT_BRIDGE || '';
-export const walletConnectDeepLink: string = process.env.REACT_APP_WALLET_CONNECT_DEEP_LINK || '';
+export const walletConnectBridge: string =
+  process.env.REACT_APP_WALLET_CONNECT_BRIDGE || '';
+export const walletConnectDeepLink: string =
+  process.env.REACT_APP_WALLET_CONNECT_DEEP_LINK || '';
 
 export const network: Dapp.NetworkType = {
   id: process.env.REACT_APP_NETWORK_ID || '',

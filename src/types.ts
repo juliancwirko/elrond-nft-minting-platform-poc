@@ -4,7 +4,7 @@ export enum TransactionType {
   CREATE,
   TRANSFER,
   ERROR,
-};
+}
 
 export enum ChainID {
   TESTNET = 'T',

@@ -14,7 +14,7 @@ const CreateNftTab = () => {
   const [nftName, setNftName] = useState('');
 
   const smallRes = useMediaQuery({
-    query: '(max-width: 860px)'
+    query: '(max-width: 860px)',
   });
 
   const issueNFTToken = (e: React.SyntheticEvent) => {
@@ -48,10 +48,14 @@ const CreateNftTab = () => {
   };
 
   return (
-    <Pane display='flex' marginBottom={80} flexDirection={smallRes ? 'column' : 'row'}>
+    <Pane
+      display="flex"
+      marginBottom={80}
+      flexDirection={smallRes ? 'column' : 'row'}
+    >
       <Pane
         width={smallRes ? '100%' : '50%'}
-        backgroundColor='white'
+        backgroundColor="white"
         marginRight={smallRes ? 0 : 10}
         padding={30}
         elevation={1}
@@ -66,25 +70,25 @@ const CreateNftTab = () => {
             2.
           </Paragraph>
         </Pane>
-        <Pane marginBottom={50} maxWidth={400} width='100%'>
+        <Pane marginBottom={50} maxWidth={400} width="100%">
           <TextInputField
-            name='name'
-            placeholder='example: TokenName'
-            label='Name'
+            name="name"
+            placeholder="example: TokenName"
+            label="Name"
             required
-            description='Name for your token'
+            description="Name for your token"
             value={tokenName}
-            hint='Must be between 3 - 20 characters long. Alphanumeric characters only'
+            hint="Must be between 3 - 20 characters long. Alphanumeric characters only"
             onChange={(e: any) => setName(e.target.value)}
           />
           <TextInputField
-            name='ticker'
-            placeholder='example: TOKN'
-            label='Ticker'
+            name="ticker"
+            placeholder="example: TOKN"
+            label="Ticker"
             required
-            description='Ticker for your token'
+            description="Ticker for your token"
             value={tokenTicker}
-            hint='Must be between 3 - 10 characters long. Alphanumeric characters only'
+            hint="Must be between 3 - 10 characters long. Alphanumeric characters only"
             onChange={(e: any) => setTicker(e.target.value.toUpperCase())}
           />
           <Button onClick={issueNFTToken}>Issue NFT token</Button>
@@ -92,7 +96,7 @@ const CreateNftTab = () => {
       </Pane>
       <Pane
         width={smallRes ? '100%' : '50%'}
-        backgroundColor='white'
+        backgroundColor="white"
         marginLeft={smallRes ? 0 : 10}
         padding={30}
         elevation={1}
@@ -107,43 +111,43 @@ const CreateNftTab = () => {
             on one identifier, so if you already have one, start here.
           </Paragraph>
         </Pane>
-        <Pane marginBottom={50} maxWidth={400} width='100%'>
+        <Pane marginBottom={50} maxWidth={400} width="100%">
           {/* TODO: add all inputs: multiple Uri, Hash, Royalties, Attributes */}
           <TextInputField
-            name='tokenIdentifier'
-            placeholder='example: TOKE-34562'
-            label='Token identifier'
+            name="tokenIdentifier"
+            placeholder="example: TOKE-34562"
+            label="Token identifier"
             required
-            description='Identifier of your ESDT token for this NFT'
+            description="Identifier of your ESDT token for this NFT"
             value={tokenIdentifier}
-            hint='Must be between 3 - 10 characters long. Alphanumeric characters only'
+            hint="Must be between 3 - 10 characters long. Alphanumeric characters only"
             onChange={(e: any) => setTokenIdentifier(e.target.value)}
           />
           <TextInputField
-            name='nftName'
-            placeholder='example: MyNFTName'
-            label='NFT name'
+            name="nftName"
+            placeholder="example: MyNFTName"
+            label="NFT name"
             required
-            description='Name of your NFT'
+            description="Name of your NFT"
             value={nftName}
-            hint='Alphanumeric characters only'
+            hint="Alphanumeric characters only"
             onChange={(e: any) => setNftName(e.target.value)}
           />
 
           <TextInputField
-            name='ipfsImageUri'
-            placeholder='example: https://ipfs.io/ipfs/{CID}'
-            label='Image URL'
+            name="ipfsImageUri"
+            placeholder="example: https://ipfs.io/ipfs/{CID}"
+            label="Image URL"
             required
-            description='Name of your NFT'
+            description="Name of your NFT"
             value={ipfsImageUri}
-            hint='The best would be to use decentralized storage, like IPFS or even better NFT.storage'
+            hint="The best would be to use decentralized storage, like IPFS or even better NFT.storage"
             onChange={(e: any) => setIpfsImage(e.target.value)}
           />
         </Pane>
-        <Pane display='flex' justifyContent='center' marginBottom={20}>
-          <Pane maxWidth={300} textAlign='center'>
-            <Pane is='img' src={ipfsImageUri} alt='' maxWidth='100%' />
+        <Pane display="flex" justifyContent="center" marginBottom={20}>
+          <Pane maxWidth={300} textAlign="center">
+            <Pane is="img" src={ipfsImageUri} alt="" maxWidth="100%" />
           </Pane>
         </Pane>
         <Button

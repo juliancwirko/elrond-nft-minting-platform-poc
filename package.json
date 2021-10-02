@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@elrondnetwork/dapp": "^0.0.41",
-    "@elrondnetwork/dapp-utils": "^0.0.9",
-    "@elrondnetwork/erdjs": "^8.0.0",
+    "@elrondnetwork/dapp": "^0.0.60",
+    "@elrondnetwork/dapp-utils": "^0.0.14",
+    "@elrondnetwork/erdjs": "^8.0.1-alpha.5",
     "evergreen-ui": "^6.4.0",
     "moment": "^2.29.1",
     "react": "^17.0.2",
@@ -19,7 +19,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "lint": "eslint --ext ts,tsx,js src --fix",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx,js,json}'"
   },
   "eslintConfig": {
     "extends": [

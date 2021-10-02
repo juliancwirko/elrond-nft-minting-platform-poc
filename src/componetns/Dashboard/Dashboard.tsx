@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import {
-  Pane,
-  Tablist,
-  Tab,
-} from 'evergreen-ui';
+import { Pane, Tablist, Tab } from 'evergreen-ui';
 import MainLayout from '../MainLayout';
 import FeedbackBox from './FeedbackBox';
 import AccountTab from './AccountTab';
@@ -27,22 +23,16 @@ const Dashboard: React.FC = () => {
               appearance="primary"
               onSelect={() => setTabSelectedIndex(index)}
               isSelected={index === selectedIndex}
-              className='no-focus'
+              className="no-focus"
             >
               {tab}
             </Tab>
           ))}
         </Tablist>
-        <Pane flex='1'>
-          {selectedIndex === 0 && (
-            <AccountTab />
-          )}
-          {selectedIndex === 1 && (
-            <CreateNftTab />
-          )}
-          {selectedIndex === 2 && (
-            <NftListTab />
-          )}
+        <Pane flex="1">
+          {selectedIndex === 0 && <AccountTab />}
+          {selectedIndex === 1 && <CreateNftTab />}
+          {selectedIndex === 2 && <NftListTab />}
         </Pane>
       </Pane>
     </MainLayout>

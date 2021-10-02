@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { UI } from '@elrondnetwork/dapp-utils';
+import { Ui } from '@elrondnetwork/dapp-utils';
 import {
   Pane,
   Heading,
@@ -46,21 +46,21 @@ const AccountTab = () => {
 
   return (
     <>
-      <Pane display='flex' flexDirection={smallRes ? 'column' : 'row'}>
+      <Pane display="flex" flexDirection={smallRes ? 'column' : 'row'}>
         <Pane
           width={smallRes ? '100%' : '50%'}
           marginRight={smallRes ? 0 : 10}
           marginBottom={25}
           padding={30}
           elevation={1}
-          backgroundColor='white'
+          backgroundColor="white"
         >
           <Heading size={700} marginBottom={10}>
             Your wallet address:
           </Heading>
           <Paragraph>
             <Link href={`${explorerAddress}accounts/${address}`}>
-              <Text wordWrap='break-word'>{address}</Text>
+              <Text wordWrap="break-word">{address}</Text>
             </Link>
           </Paragraph>
         </Pane>
@@ -71,19 +71,19 @@ const AccountTab = () => {
           marginBottom={25}
           padding={30}
           elevation={1}
-          backgroundColor='white'
+          backgroundColor="white"
         >
           <Heading size={700} marginBottom={10}>
             Your wallet balance:
           </Heading>
           <Paragraph>
-            <UI.Denominate value={account.balance} erdLabel="xEGLD" />
+            <Ui.Denominate value={account.balance} erdLabel="xEGLD" />
           </Paragraph>
         </Pane>
       </Pane>
 
       <Pane
-        backgroundColor='white'
+        backgroundColor="white"
         marginBottom={25}
         padding={30}
         elevation={1}
@@ -103,7 +103,7 @@ const AccountTab = () => {
 
           <Pane>
             {pending ? (
-              <Spinner marginX='auto' marginY='auto' />
+              <Spinner marginX="auto" marginY="auto" />
             ) : (
               <Table>
                 <Table.Head padding={0}>
@@ -116,7 +116,7 @@ const AccountTab = () => {
                 <Table.Body>
                   {transactionsList.map((transaction: any, index: number) => (
                     <Pane key={index}>
-                      <Table.Row background='tint1'>
+                      <Table.Row background="tint1">
                         <Table.TextCell>
                           {new Date(
                             transaction.timestamp * 1000
@@ -137,7 +137,7 @@ const AccountTab = () => {
                           </Link>
                         </Table.TextCell>
                       </Table.Row>
-                      <Table.Row paddingY={50} paddingX={20} height='auto'>
+                      <Table.Row paddingY={50} paddingX={20} height="auto">
                         <Table.TextCell>
                           <Pane marginBottom={10}>
                             <Text>
@@ -161,12 +161,12 @@ const AccountTab = () => {
                             </Text>
                           </Pane>
                           <Pane
-                            maxWidth='100%'
+                            maxWidth="100%"
                             padding={20}
                             marginBottom={10}
-                            background='gray100'
-                            wordWrap='break-word'
-                            whiteSpace='normal'
+                            background="gray100"
+                            wordWrap="break-word"
+                            whiteSpace="normal"
                           >
                             <Text>{atob(transaction.data)}</Text>
                           </Pane>
@@ -180,12 +180,12 @@ const AccountTab = () => {
                               (sc: any, index: number) => (
                                 <Pane
                                   key={index}
-                                  maxWidth='100%'
+                                  maxWidth="100%"
                                   padding={20}
                                   marginBottom={10}
-                                  background='gray100'
-                                  wordWrap='break-word'
-                                  whiteSpace='normal'
+                                  background="gray100"
+                                  wordWrap="break-word"
+                                  whiteSpace="normal"
                                 >
                                   {atob(sc.data)}
                                 </Pane>

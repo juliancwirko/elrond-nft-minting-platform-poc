@@ -3,11 +3,11 @@ import Home from './componetns/Home';
 
 export const routes = [
   {
-    path: "/",
+    path: '/',
     component: Dashboard,
   },
   {
-    path: "/dashboard",
+    path: '/dashboard',
     component: Home,
     authenticatedRoute: true,
   },

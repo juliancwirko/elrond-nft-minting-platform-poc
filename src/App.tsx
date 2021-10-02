@@ -18,17 +18,17 @@ function App() {
     >
       <Router>
         <Switch>
-          <Route path='/unlock' exact>
+          <Route path="/unlock" exact>
             <Unlock />
           </Route>
-          <Route path='/ledger' exact>
+          <Route path="/ledger" exact>
             <Ledger />
           </Route>
-          <Route path='/walletconnect' exact>
+          <Route path="/walletconnect" exact>
             <WalletConnect />
           </Route>
-          <Route path='/dashboard' component={Dashboard} exact />
-          <Route path='/' component={Home} exact />
+          <Route path="/dashboard" component={Dashboard} exact />
+          <Route path="/" component={Home} exact />
         </Switch>
       </Router>
     </Dapp.Context>

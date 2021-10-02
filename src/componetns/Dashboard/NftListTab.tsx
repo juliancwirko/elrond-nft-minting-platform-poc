@@ -40,13 +40,13 @@ const NftListTab = () => {
       <Pane marginBottom={30} marginTop={30}>
         <Heading size={700}>Your NFTs:</Heading>
       </Pane>
-      <Pane display='flex' flexWrap='wrap'>
+      <Pane display="flex" flexWrap="wrap">
         {pending ? (
-          <Spinner marginX='auto' marginY='auto' />
+          <Spinner marginX="auto" marginY="auto" />
         ) : (
           nfts.map((nft: any, index: number) => (
             <Pane
-              backgroundColor='white'
+              backgroundColor="white"
               width={smallRes ? 'calc(50% - 20px)' : 'calc(25% - 20px)'}
               margin={10}
               padding={20}
@@ -60,12 +60,12 @@ const NftListTab = () => {
               <Pane marginBottom={10}>
                 <Text fontSize={12}>Id: {nft.identifier}</Text>
               </Pane>
-              <Pane is='a' href={atob(nft.uris[0])}>
+              <Pane is="a" href={atob(nft.uris[0])}>
                 <Pane
-                  is='img'
+                  is="img"
                   src={atob(nft.uris[0])}
-                  maxWidth='100%'
-                  width='auto'
+                  maxWidth="100%"
+                  width="auto"
                 />
               </Pane>
             </Pane>

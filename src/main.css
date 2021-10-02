@@ -17,6 +17,11 @@ body {
 /* elrond dapp tools overwrites - there is no other way at the moment and I don't want to use react-bootstrap */
 .card-body {
   text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
 }
 
 .card-body h4.mb-4,

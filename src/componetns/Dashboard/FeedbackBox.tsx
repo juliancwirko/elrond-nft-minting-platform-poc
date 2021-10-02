@@ -13,15 +13,16 @@ interface FeedbackBoxProps {
 const FeedbackBox: React.FC<FeedbackBoxProps> = ({ setTabSelectedIndex }) => {
   const [transactionHash, setTransactionHash] = useState('');
   const [tokenIdentifier, setTokenIdentifier] = useState('');
-  const [transactionType, setTransactionType] =
-    useState<TransactionType | undefined>();
+  const [transactionType, setTransactionType] = useState<
+    TransactionType | undefined
+  >();
 
   const { address, explorerAddress } = Dapp.useContext();
   const sendTransaction = Dapp.useSendTransaction();
 
   const parseScResponses = useCallback(
     (scResults: any) => {
-      if (scResults.length > 1) {
+      if (scResults?.length > 1) {
         const setRoleObj = scResults.find((item: any) =>
           atob(item.data).includes('ESDTSetRole')
         );
@@ -64,21 +65,23 @@ const FeedbackBox: React.FC<FeedbackBoxProps> = ({ setTabSelectedIndex }) => {
       const data = await response.json();
 
       // TODO: refactor this logic using tools from SDK
-      const tokenFromIssuance = parseScResponses(
-        data.scResults
-      ).issuanceTypeToken;
-      const tokenFromRoleType = parseScResponses(
-        data.scResults
-      ).esdtSetRoleToken;
+      if (data?.results?.length > 0) {
+        const tokenFromIssuance = parseScResponses(
+          data.results
+        ).issuanceTypeToken;
+        const tokenFromRoleType = parseScResponses(
+          data.results
+        ).esdtSetRoleToken;
 
-      if (tokenFromRoleType) {
-        setTokenIdentifier(tokenFromRoleType);
-        setTransactionType(TransactionType.ROLES);
-      }
+        if (tokenFromRoleType) {
+          setTokenIdentifier(tokenFromRoleType);
+          setTransactionType(TransactionType.ROLES);
+        }
 
-      if (tokenFromIssuance) {
-        setTokenIdentifier(tokenFromIssuance);
-        setTransactionType(TransactionType.ISSUANCE);
+        if (tokenFromIssuance) {
+          setTokenIdentifier(tokenFromIssuance);
+          setTransactionType(TransactionType.ISSUANCE);
+        }
       }
     };
 
@@ -131,7 +134,7 @@ const FeedbackBox: React.FC<FeedbackBoxProps> = ({ setTabSelectedIndex }) => {
             <Text>Now assign proper roles to be able to create NFTs.</Text>
           </Pane>
           <Pane marginTop={10}>
-            <Button appearance='primary' onClick={assignCreateRole}>
+            <Button appearance="primary" onClick={assignCreateRole}>
               Assign proper roles now!
             </Button>
           </Pane>
@@ -160,14 +163,14 @@ const FeedbackBox: React.FC<FeedbackBoxProps> = ({ setTabSelectedIndex }) => {
   };
 
   return transactionHash ? (
-    <Pane elevation={1} backgroundColor='white' padding={30} marginBottom={32}>
+    <Pane elevation={1} backgroundColor="white" padding={30} marginBottom={32}>
       <Pane>{getSection()}</Pane>
       <Pane marginTop={15}>
         <Pane>
           <Text>Transaction in Elrond Explorer:</Text>
         </Pane>
         <Link href={`${explorerAddress}transactions/${transactionHash}`}>
-          <Text color='blue400' wordWrap='break-word'>
+          <Text color="blue400" wordWrap="break-word">
             {`${explorerAddress}transactions/${transactionHash}`}
           </Text>
         </Link>

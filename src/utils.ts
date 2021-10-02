@@ -12,7 +12,7 @@ export const stringToHex = (str: string) => {
 
 export const hexToString = (strVal: string) => {
   if (strVal) {
-    const hex  = strVal.toString();
+    const hex = strVal.toString();
     let str = '';
     for (let n = 0; n < hex.length; n += 2) {
       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
@@ -24,6 +24,9 @@ export const hexToString = (strVal: string) => {
 
 export const shortenWalletAddress = (address: string, charsAmount = 6) => {
   const firstPart = address.substring(0, charsAmount);
-  const lastPart = address.substring(address.length - charsAmount, address.length);
+  const lastPart = address.substring(
+    address.length - charsAmount,
+    address.length
+  );
   return `${firstPart}...${lastPart}`;
 };
