@@ -24,12 +24,6 @@ export interface CreateNFTData {
   uri: string;
 }
 
-export interface TransferNFTData {
-  senderAddress: string;
-  tokenIdentifier: string;
-  nonce: string;
-}
-
 export const issueNft = (data: IssueNFTData) =>
   new Transaction({
     receiver: new Address(
@@ -69,16 +63,4 @@ export const createNFT = (data: CreateNFTData) =>
       )}@00@@@${stringToHex(data.uri)}`
     ),
     gasLimit: new GasLimit(60000000),
-  });
-
-export const transferNFT = (data: TransferNFTData) =>
-  new Transaction({
-    receiver: new Address(data.senderAddress),
-    value: Balance.egld('0'),
-    data: new TransactionPayload(
-      `ESDTNFTCreate@${stringToHex(data.tokenIdentifier)}@${stringToHex(
-        data.nonce
-      )}@${stringToHex('1')}@${new Address(data.senderAddress).hex()}`
-    ),
-    gasLimit: new GasLimit(1000500),
   });
