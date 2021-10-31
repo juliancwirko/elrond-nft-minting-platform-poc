@@ -18,6 +18,18 @@ const Home: React.FC = () => {
           <Link href="https://github.com/ElrondNetwork">tooling</Link>.
         </Paragraph>
 
+        <Paragraph fontWeight="bold">
+          The Smart Contract and erdjs based automation script are in the
+          works...
+        </Paragraph>
+        <Paragraph marginBottom={30}>
+          For now, check the{' '}
+          <Link href="https://github.com/juliancwirko/nft-art-maker">
+            nft-art-maker
+          </Link>
+          . It will be beneficial in the process.
+        </Paragraph>
+
         <Paragraph marginBottom={30}>
           <Button onClick={unlock}>Unlock Elven Tools</Button>
           <Link marginLeft={10} href="https://github.com/juliancwirko">
@@ -47,11 +59,10 @@ const Home: React.FC = () => {
           </Pane>
         </Pane>
 
-        <Paragraph marginBottom={30} fontWeight="bold">
-          You would need to have the devnet address. The best is to unlock using
-          the web wallet. The browser extension wallet will unlock the app, but
-          you won't create NFT using it on the devnet. The functionality will
-          probably come later.
+        <Paragraph marginBottom={30}>
+          You would need to have the devnet address. You can use a couple of
+          different ways to unlock and sign transactions. For now, it was tested
+          using web wallet and Maiar browser extension.
         </Paragraph>
 
         <Heading>Tooling:</Heading>
@@ -71,9 +82,8 @@ const Home: React.FC = () => {
           is to use <Link href="https://nft.storage/">NFT.storage</Link> free,
           decentralized storage, and bandwidth for NFTs on{' '}
           <Link href="https://ipfs.io/">IPFS</Link> and{' '}
-          <Link href="https://filecoin.io/">Filecoin</Link>. Let's store NFTs
-          files in a decentralized way. It should provide a pinning service as
-          well.
+          <Link href="https://filecoin.io/">Filecoin</Link>. It should provide a
+          pinning service as well.
         </Paragraph>
 
         <Heading>What you need to play with it:</Heading>
@@ -89,19 +99,41 @@ const Home: React.FC = () => {
           (I guess not an official tool, but it works well). You can also use an
           official one accessible from the devnet web wallet.
         </Paragraph>
-        <Paragraph marginBottom={30}>
+        <Paragraph>
           3. With wallet address and some xEGLD you can start playing with Elven
           Tools
         </Paragraph>
-
-        <Heading>What's next:</Heading>
+        <Paragraph>
+          4. Unlock it using web wallet json file and password or Maiar browser
+          extension.
+        </Paragraph>
         <Paragraph marginBottom={30}>
-          I would like to have much more docs. Like detailed erdjs SDK
-          documentation, going through many different docs and codebase burns a
-          lot of time. Of course, I understand that everything takes time, and
-          we will get those soon. I want to shape Elven Tools to be responsible
-          for NFTs minting and sending using a Smart Contract responsible for
-          that.
+          5. Then you can start creating NFTs.
+        </Paragraph>
+
+        <Heading>Roadmap:</Heading>
+        <Paragraph>- Smart Contract implementation</Paragraph>
+        <Paragraph>
+          - Possibility to mint single NFTs using Smart Contract
+        </Paragraph>
+        <Paragraph>
+          - Possibility to mint single NFTs using Smart Contract
+        </Paragraph>
+        <Paragraph>
+          - Possibility to list it and sell - some kind of marketplace
+        </Paragraph>
+        <Paragraph>
+          - Custom erdjs script for automation and mass minting
+        </Paragraph>
+        <Paragraph>
+          - Possibility to list a collection - minted using nft-art-maker and
+          custom script
+        </Paragraph>
+        <Paragraph>- Much better UI/UX</Paragraph>
+        <Paragraph>- Improvements (SC and frontend)</Paragraph>
+        <Paragraph marginBottom={30}>
+          - If it will make sense, and if it will work well - deploy to the
+          mainnet (???)
         </Paragraph>
 
         <Heading>Things I don't know yet:</Heading>
@@ -113,10 +145,14 @@ const Home: React.FC = () => {
           pinning service anyway. I know that the Elrond team works on a
           solution and NFT marketplace, so I hope I will play with these soon.
         </Paragraph>
-        <Paragraph marginBottom={30}>
+        <Paragraph>
           - I prefer to use only JavaScript SDK with custom React
           implementation, but now, I don't want to spend more time checking how
           much work is required to make all authentication providers work.
+        </Paragraph>
+        <Paragraph marginBottom={30}>
+          - It would be awesome to have the possibility to sign multiple 'create
+          nft' transactions without the need to confirm every in the UI
         </Paragraph>
 
         <Heading>If you want to contact me:</Heading>
@@ -139,10 +175,15 @@ const Home: React.FC = () => {
         </Heading>
 
         <Heading>
-          Also, check out my other learning resources regarding Elrond
+          Also, check out my other learning resources and tools regarding Elrond
           blockchain:
         </Heading>
 
+        <Paragraph>
+          <Link href="https://github.com/juliancwirko/nft-art-maker">
+            - nft-art-maker tool
+          </Link>
+        </Paragraph>
         <Paragraph>
           <Link href="https://www.julian.io/articles/elrond-smart-contracts.html">
             - Smart Contract for Elrond and Arwen

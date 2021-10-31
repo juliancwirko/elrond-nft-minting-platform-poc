@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Pane, Text, Link, Button, Strong } from 'evergreen-ui';
+import { useLocation } from 'react-router-dom';
 import * as Dapp from '@elrondnetwork/dapp';
 import { TransactionType } from '../../types';
 import { assignRoles } from '../../transactions';
@@ -16,6 +17,7 @@ const FeedbackBox: React.FC<FeedbackBoxProps> = ({ setTabSelectedIndex }) => {
   const [transactionType, setTransactionType] = useState<
     TransactionType | undefined
   >();
+  const location = useLocation();
 
   const { address, explorerAddress } = Dapp.useContext();
   const sendTransaction = Dapp.useSendTransaction();
@@ -108,7 +110,7 @@ const FeedbackBox: React.FC<FeedbackBoxProps> = ({ setTabSelectedIndex }) => {
       document.title,
       window.location.href.split(/[?#]/)[0]
     );
-  }, [setTabSelectedIndex, parseScResponses]);
+  }, [setTabSelectedIndex, parseScResponses, location]);
 
   const assignCreateRole = () => {
     if (tokenIdentifier) {

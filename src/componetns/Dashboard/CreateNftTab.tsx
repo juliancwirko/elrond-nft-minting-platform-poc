@@ -7,12 +7,14 @@ import {
   Button,
   SelectField,
 } from 'evergreen-ui';
+import { useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { nftCollections } from '../../apiEndpoints';
 import { issueNft, createNFT } from '../../transactions';
 import * as Dapp from '@elrondnetwork/dapp';
 
 const CreateNftTab = () => {
+  const location = useLocation();
   const [collections, setCollections] = useState<string[]>([]);
   const { address } = Dapp.useContext();
   const sendTransaction = Dapp.useSendTransaction();
@@ -47,7 +49,7 @@ const CreateNftTab = () => {
       setCollections(data.map((item: any) => item.collection));
     };
     fetchFn();
-  }, []);
+  }, [location]);
 
   const createNFTToken = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -162,12 +164,12 @@ const CreateNftTab = () => {
 
           <TextInputField
             name="ipfsImageUri"
-            placeholder="example: https://ipfs.io/ipfs/{CID}"
+            placeholder="example: ipfs://{CID} or https://ipfs.io/ipfs/{CID}"
             label="Image URL"
             required
             description="Name of your NFT"
             value={ipfsImageUri}
-            hint="The best would be to use decentralized storage, like IPFS or even better NFT.storage"
+            hint="The best would be to use decentralized storage, like IPFS. Nice options are nft.storage and web3.storage. It can be ipfs://{cid} or any IPFS gateway URL."
             onChange={(e: any) => setIpfsImage(e.target.value)}
           />
         </Pane>
