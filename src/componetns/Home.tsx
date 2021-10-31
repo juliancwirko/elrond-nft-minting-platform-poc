@@ -117,9 +117,6 @@ const Home: React.FC = () => {
           - Possibility to mint single NFTs using Smart Contract
         </Paragraph>
         <Paragraph>
-          - Possibility to mint single NFTs using Smart Contract
-        </Paragraph>
-        <Paragraph>
           - Possibility to list it and sell - some kind of marketplace
         </Paragraph>
         <Paragraph>
