@@ -3,6 +3,10 @@
 - [elven.tools](https://www.elven.tools)
 - [Quick walkthrough video (uses the testnet)](https://youtu.be/EyND_L37Pac)
 
+also check out useful tools:
+- [elven-mint](https://github.com/juliancwirko/elven-mint)
+- [nft-art-maker](https://github.com/juliancwirko/nft-art-maker)
+
 This app is a result of learning and playing with [Elrond](https://elrond.com/) blockchain and its [tooling](https://github.com/ElrondNetwork).
 
 Elven Tools is a replication of NFTs creation functionality only on the devnet. Using it, you can issue ESDT tokens for NFTs, create NFTs, displaying already created NFTs and transactions. All done using React tools from Elrond, which are in the early stage, but I am impressed that I could build a lot.

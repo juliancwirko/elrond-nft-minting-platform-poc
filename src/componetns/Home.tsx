@@ -19,15 +19,18 @@ const Home: React.FC = () => {
         </Paragraph>
 
         <Paragraph fontWeight="bold">
-          The Smart Contract and erdjs based automation script are in the
-          works...
+          The Smart Contract is in the works...
         </Paragraph>
         <Paragraph marginBottom={30}>
           For now, check the{' '}
           <Link href="https://github.com/juliancwirko/nft-art-maker">
             nft-art-maker
+          </Link>{' '}
+          and{' '}
+          <Link href="https://github.com/juliancwirko/elven-mint">
+            elven-mint
           </Link>
-          . It will be beneficial in the process.
+          . These tools will be beneficial in the process.
         </Paragraph>
 
         <Paragraph marginBottom={30}>
@@ -176,6 +179,11 @@ const Home: React.FC = () => {
           blockchain:
         </Heading>
 
+        <Paragraph>
+          <Link href="https://github.com/juliancwirko/elven-mint">
+            - elven-mint tool
+          </Link>
+        </Paragraph>
         <Paragraph>
           <Link href="https://github.com/juliancwirko/nft-art-maker">
             - nft-art-maker tool
