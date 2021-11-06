@@ -15,7 +15,7 @@ import * as Dapp from '@elrondnetwork/dapp';
 import { getTransactions } from '../../apiEndpoints';
 
 const AccountTab = () => {
-  const { account, egldLabel, address, explorerAddress } = Dapp.useContext();
+  const { account, address, explorerAddress } = Dapp.useContext();
   const [pending, setPending] = useState(false);
   const [transactionsList, setTransactionsList] = useState([]);
   const smallRes = useMediaQuery({
@@ -123,10 +123,16 @@ const AccountTab = () => {
                           ).toLocaleDateString()}
                         </Table.TextCell>
                         <Table.TextCell>
-                          {transaction.value / 1000000000000000000} {egldLabel}
+                          <Ui.Denominate
+                            value={transaction.value}
+                            erdLabel="xEGLD"
+                          />
                         </Table.TextCell>
                         <Table.TextCell>
-                          {transaction.fee / 1000000000000000000} {egldLabel}
+                          <Ui.Denominate
+                            value={transaction.fee}
+                            erdLabel="xEGLD"
+                          />
                         </Table.TextCell>
                         <Table.TextCell>{transaction.status}</Table.TextCell>
                         <Table.TextCell>

@@ -30,10 +30,3 @@ export const shortenWalletAddress = (address: string, charsAmount = 6) => {
   );
   return `${firstPart}...${lastPart}`;
 };
-
-export const providerIdMap: { [key: string]: string } = {
-  local: 'local-testnet',
-  testnet: 'elrond-testnet',
-  devnet: 'elrond-devnet',
-  mainnet: 'elrond-mainnet',
-};

@@ -2,6 +2,7 @@
 
 - [elven.tools](https://www.elven.tools)
 - [Quick walkthrough video (uses the testnet)](https://youtu.be/EyND_L37Pac)
+- [Tools for automated NFT minting](https://www.julian.io/articles/elven-nft-tools.html)
 
 also check out useful tools:
 - [elven-mint](https://github.com/juliancwirko/elven-mint)

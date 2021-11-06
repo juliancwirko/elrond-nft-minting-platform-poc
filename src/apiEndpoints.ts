@@ -14,4 +14,4 @@ export const getNfts = (walletAddress: string) =>
   `${network.apiAddress}/accounts/${walletAddress}/nfts`;
 
 export const nftCollections = (walletAddress: string) =>
-  `${network.apiAddress}/accounts/${walletAddress}/collections`;
+  `${network.apiAddress}/accounts/${walletAddress}/collections?canCreate=true`;

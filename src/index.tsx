@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { NetworkConfig, chooseProvider } from '@elrondnetwork/erdjs';
+import { NetworkConfig, ProxyProvider } from '@elrondnetwork/erdjs';
 import App from './App';
-import { providerIdMap } from './utils';
 import { network } from './config';
 import reportWebVitals from './reportWebVitals';
 import './main.css';
 
 // Sync Elrond provider
-const chainType = chooseProvider(providerIdMap[network.id]);
-NetworkConfig.getDefault().sync(chainType);
+if (network.gatewayAddress) {
+  const proxyProvider = new ProxyProvider(network.gatewayAddress, {
+    timeout: 20000,
+  });
+  NetworkConfig.getDefault().sync(proxyProvider);
+}
 
 ReactDOM.render(
   <React.StrictMode>

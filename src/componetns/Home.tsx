@@ -18,6 +18,20 @@ const Home: React.FC = () => {
           <Link href="https://github.com/ElrondNetwork">tooling</Link>.
         </Paragraph>
 
+        <Paragraph marginBottom={30}>
+          <Button onClick={unlock}>Unlock Elven Tools</Button>
+          <Link marginLeft={10} href="https://github.com/juliancwirko">
+            Github
+          </Link>
+        </Paragraph>
+
+        <Paragraph marginBottom={30}>
+          Updates:{' '}
+          <Link href="https://www.julian.io/articles/elven-nft-tools.html">
+            Tools for automated NFT minting
+          </Link>
+        </Paragraph>
+
         <Paragraph fontWeight="bold">
           The Smart Contract is in the works...
         </Paragraph>
@@ -31,13 +45,6 @@ const Home: React.FC = () => {
             elven-mint
           </Link>
           . These tools will be beneficial in the process.
-        </Paragraph>
-
-        <Paragraph marginBottom={30}>
-          <Button onClick={unlock}>Unlock Elven Tools</Button>
-          <Link marginLeft={10} href="https://github.com/juliancwirko">
-            Github
-          </Link>
         </Paragraph>
 
         <Paragraph marginBottom={30}>
