@@ -22,6 +22,7 @@ const CreateNftTab = () => {
   const [tokenName, setName] = useState('');
   const [tokenTicker, setTicker] = useState('');
   const [tokenIdentifier, setTokenIdentifier] = useState('');
+  const [attributes, setAttributes] = useState('');
   const [nftName, setNftName] = useState('');
 
   const smallRes = useMediaQuery({
@@ -59,6 +60,7 @@ const CreateNftTab = () => {
         tokenIdentifier,
         nftName,
         uri: ipfsImageUri,
+        attributes,
       });
       sendTransaction({
         transaction: tx,
@@ -131,8 +133,8 @@ const CreateNftTab = () => {
             on one identifier, so if you already have one, start here.
           </Paragraph>
         </Pane>
+        {/* TODO: add royalties */}
         <Pane marginBottom={50} maxWidth={400} width="100%">
-          {/* TODO: add all inputs: multiple Uri, Hash, Royalties, Attributes */}
           <SelectField
             name="tokenIdentifier"
             placeholder="example: TOKE-34562"
@@ -160,6 +162,16 @@ const CreateNftTab = () => {
             value={nftName}
             hint="Alphanumeric characters only"
             onChange={(e: any) => setNftName(e.target.value)}
+          />
+
+          <TextInputField
+            name="attributes"
+            placeholder="key1:value1;key2:value2"
+            label="Attributes"
+            description="Arbitrary field that should contain a set of attributes in the format desired by the creator"
+            value={attributes}
+            hint="Alphanumeric characters only"
+            onChange={(e: any) => setAttributes(e.target.value)}
           />
 
           <TextInputField

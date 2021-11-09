@@ -9,7 +9,7 @@ import './main.css';
 // Sync Elrond provider
 if (network.gatewayAddress) {
   const proxyProvider = new ProxyProvider(network.gatewayAddress, {
-    timeout: 20000,
+    timeout: 5000,
   });
   NetworkConfig.getDefault().sync(proxyProvider);
 }

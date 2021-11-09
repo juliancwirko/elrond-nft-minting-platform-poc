@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { Pane, Tablist, Tab } from 'evergreen-ui';
+import { useLocation } from 'react-router-dom';
 import MainLayout from '../MainLayout';
 import FeedbackBox from './FeedbackBox';
 import AccountTab from './AccountTab';
@@ -10,6 +11,11 @@ const tabs = ['Account', 'Create NFT', "Your NFT's"];
 
 const Dashboard: React.FC = () => {
   const [selectedIndex, setTabSelectedIndex] = useState(0);
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  }, [pathname]);
 
   return (
     <MainLayout>

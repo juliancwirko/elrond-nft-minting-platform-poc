@@ -1,4 +1,3 @@
-import { stringToHex } from './utils';
 import {
   Transaction,
   GasLimit,
@@ -6,6 +5,8 @@ import {
   TransactionPayload,
   Balance,
 } from '@elrondnetwork/erdjs';
+import { smartContract } from './config';
+import { stringToHex } from './utils';
 
 export interface IssueNFTData {
   tokenName: string;
@@ -22,13 +23,12 @@ export interface CreateNFTData {
   tokenIdentifier: string;
   nftName: string;
   uri: string;
+  attributes?: string;
 }
 
 export const issueNft = (data: IssueNFTData) =>
   new Transaction({
-    receiver: new Address(
-      'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqzllls8a5w6u'
-    ),
+    receiver: new Address(smartContract),
     value: Balance.egld('0.05'),
     data: new TransactionPayload(
       `issueNonFungible@${stringToHex(data.tokenName)}@${stringToHex(
@@ -40,9 +40,7 @@ export const issueNft = (data: IssueNFTData) =>
 
 export const assignRoles = (data: AssignRolesData) =>
   new Transaction({
-    receiver: new Address(
-      'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqzllls8a5w6u'
-    ),
+    receiver: new Address(smartContract),
     value: Balance.egld('0'),
     data: new TransactionPayload(
       `setSpecialRole@${stringToHex(data.tokenIdentifier)}@${new Address(
@@ -52,7 +50,7 @@ export const assignRoles = (data: AssignRolesData) =>
     gasLimit: new GasLimit(60000000),
   });
 
-// TODO: multiple Uri, Hash, Royalties, Attributes
+// TODO: royalties
 export const createNFT = (data: CreateNFTData) =>
   new Transaction({
     receiver: new Address(data.senderAddress),
@@ -60,7 +58,7 @@ export const createNFT = (data: CreateNFTData) =>
     data: new TransactionPayload(
       `ESDTNFTCreate@${stringToHex(data.tokenIdentifier)}@01@${stringToHex(
         data.nftName
-      )}@00@@@${stringToHex(data.uri)}`
+      )}@00@@${stringToHex(data.attributes || '')}@${stringToHex(data.uri)}`
     ),
     gasLimit: new GasLimit(60000000),
   });

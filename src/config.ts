@@ -14,3 +14,5 @@ export const network: Dapp.NetworkType = {
   gatewayAddress: process.env.REACT_APP_NETWORK_GATEWAY_ADDRESS,
   explorerAddress: process.env.REACT_APP_NETWORK_EXPLORER_ADDRESS,
 };
+
+export const smartContract = process.env.REACT_APP_SMART_CONTRACT;

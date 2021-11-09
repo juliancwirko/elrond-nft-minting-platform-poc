@@ -1250,10 +1250,10 @@
     react-bootstrap "1.5.2"
     react-router-dom "5.2.0"
 
-"@elrondnetwork/dapp@^0.0.60":
-  version "0.0.60"
-  resolved "https://registry.yarnpkg.com/@elrondnetwork/dapp/-/dapp-0.0.60.tgz#441590365ee8d3486428d2ff5d262f3832700eca"
-  integrity sha512-ce2zO8x3D+yO9EumegbWsbCwgwC1Dxsb+q3XgWjZiKypyNaMqfgm2EF5qU4VFgYdqtbWRNYgytvKx24Q5L94qg==
+"@elrondnetwork/dapp@^0.0.67":
+  version "0.0.67"
+  resolved "https://registry.yarnpkg.com/@elrondnetwork/dapp/-/dapp-0.0.67.tgz#82be1342b246f0ba4769ba7ffc337b66b8f834c1"
+  integrity sha512-OpNld58Q5c4BZNnqlJojp1gnqiQyKVQCOM8kdbDQizWm93oOSNfqylhJ/c3Y6/SDnFvsWTrh0psNRPI3LyFL9g==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "1.2.35"
     "@fortawesome/free-solid-svg-icons" "5.15.3"
@@ -1265,10 +1265,10 @@
     qs "6.10.1"
     react-bootstrap "1.5.2"
 
-"@elrondnetwork/erdjs@^8.0.1-alpha.5":
-  version "8.0.1-alpha.5"
-  resolved "https://registry.yarnpkg.com/@elrondnetwork/erdjs/-/erdjs-8.0.1-alpha.5.tgz#5405960e273ce3fe6ff70923aaf93bb2d938bb94"
-  integrity sha512-Lfj4kt13jULWLrs4LZihnSCXGKxOcl1AY9UXN9PL2zkuqD+jOkt+DMPCdMyZqrTJATSIBtbR8oNpT8EJn9FGSQ==
+"@elrondnetwork/erdjs@^8.0.1-alpha.11":
+  version "8.0.1-alpha.11"
+  resolved "https://registry.yarnpkg.com/@elrondnetwork/erdjs/-/erdjs-8.0.1-alpha.11.tgz#33374c35ed38f85911c77483d42daa947a59031c"
+  integrity sha512-RERkjtYKI4igXkw/OhSOJeuUEalOfz1VwJ8G1T150SY8JfgTWZ8SE96sylVXQYsFUXVJ9FP0Pmzc9pHU16rGiA==
   dependencies:
     "@babel/runtime" "7.11.2"
     "@elrondnetwork/bls-wasm" "0.3.3"
