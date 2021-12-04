@@ -1,5 +1,5 @@
-import Dashboard from './componetns/Dashboard/Dashboard';
-import Home from './componetns/Home';
+import Dashboard from './components/Dashboard/Dashboard';
+import Home from './components/Home';
 
 export const routes = [
   {
