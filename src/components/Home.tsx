@@ -39,10 +39,14 @@ const Home: React.FC = () => {
           For now, check the{' '}
           <Link href="https://github.com/juliancwirko/nft-art-maker">
             nft-art-maker
-          </Link>{' '}
-          and{' '}
+          </Link>
+          ,{' '}
           <Link href="https://github.com/juliancwirko/elven-mint">
             elven-mint
+          </Link>{' '}
+          and{' '}
+          <Link href="https://github.com/juliancwirko/elven-tools-cli">
+            elven-tools-cli
           </Link>
           . These tools will be beneficial in the process.
         </Paragraph>
@@ -51,8 +55,7 @@ const Home: React.FC = () => {
           Elven Tools is a replication of NFTs creation functionality only on
           the devnet. Using it, you can issue ESDT tokens for NFTs, create NFTs,
           displaying already created NFTs and transactions. All done using React
-          tools from Elrond, which are in the early stage, but I am impressed
-          that I could build a lot.
+          tools from Elrond.
         </Paragraph>
 
         <Pane marginBottom={30}>
@@ -121,45 +124,22 @@ const Home: React.FC = () => {
           5. Then you can start creating NFTs.
         </Paragraph>
 
-        <Heading>Roadmap:</Heading>
-        <Paragraph>- Smart Contract implementation</Paragraph>
+        <Heading>Roadmap (for the devnet POC ;)):</Heading>
+        <Paragraph>- Proper Smart Contract implementation</Paragraph>
         <Paragraph>
-          - Possibility to mint single NFTs using Smart Contract
+          - Possibility to mint single NFTs and Collection using a minter Smart
+          Contract (probably separate tools)
         </Paragraph>
+        <Paragraph>- Possibility to list it and sell</Paragraph>
         <Paragraph>
-          - Possibility to list it and sell - some kind of marketplace
-        </Paragraph>
-        <Paragraph>
-          - Custom erdjs script for automation and mass minting
-        </Paragraph>
-        <Paragraph>
-          - Possibility to list a collection - minted using nft-art-maker and
-          custom script
+          - Possibility to list a collection - minted using other tooling, for
+          example elrond-tools-cli
         </Paragraph>
         <Paragraph>- Much better UI/UX</Paragraph>
-        <Paragraph>- Improvements (SC and frontend)</Paragraph>
+        <Paragraph>- Other improvements</Paragraph>
         <Paragraph marginBottom={30}>
           - If it will make sense, and if it will work well - deploy to the
-          mainnet (???)
-        </Paragraph>
-
-        <Heading>Things I don't know yet:</Heading>
-        <Paragraph>
-          - It would be good to integrate some tooling for uploads,
-          <a href="https://nft.storage/">NFT.storage</a> or{' '}
-          <a href="https://web3.storage/">Web3 Storage</a> are nice, but every
-          user should use a separate account. Bare IPFS is ok, but it needs
-          pinning service anyway. I know that the Elrond team works on a
-          solution and NFT marketplace, so I hope I will play with these soon.
-        </Paragraph>
-        <Paragraph>
-          - I prefer to use only JavaScript SDK with custom React
-          implementation, but now, I don't want to spend more time checking how
-          much work is required to make all authentication providers work.
-        </Paragraph>
-        <Paragraph marginBottom={30}>
-          - It would be awesome to have the possibility to sign multiple 'create
-          nft' transactions without the need to confirm every in the UI
+          mainnet (??? probably not, to much devops work is required ;))
         </Paragraph>
 
         <Heading>If you want to contact me:</Heading>
@@ -178,7 +158,12 @@ const Home: React.FC = () => {
         <Heading size={500} marginBottom={30}>
           Until I figure out and learn a couple of more things, there are no
           plans to make it a thing, but maybe it will become usable during my
-          learning process
+          learning process. Maybe someone could take something from that. It
+          will probably shift more towards{' '}
+          <Link href="https://github.com/juliancwirko/elven-tools-cli">
+            elven-tools-cli
+          </Link>{' '}
+          + maybe the devnet marketplace POC later.
         </Heading>
 
         <Heading>
