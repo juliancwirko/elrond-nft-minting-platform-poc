@@ -25,10 +25,15 @@ const Home: React.FC = () => {
           </Link>
         </Paragraph>
 
+        <Paragraph>Updates:</Paragraph>
+        <Paragraph>
+          <Link href="https://www.julian.io/articles/elrond-erdjs.html">
+            - Building NFT related CLI tool with Elrond's JavaScript SDK
+          </Link>
+        </Paragraph>
         <Paragraph marginBottom={30}>
-          Updates:{' '}
           <Link href="https://www.julian.io/articles/elven-nft-tools.html">
-            Tools for automated NFT minting
+            - Tools for automated NFT minting
           </Link>
         </Paragraph>
 

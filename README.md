@@ -4,6 +4,7 @@ For more info check: [elven.tools](https://www.elven.tools/)
 
 - [Quick walkthrough video (uses the testnet)](https://youtu.be/EyND_L37Pac)
 - [Tools for automated NFT minting](https://www.julian.io/articles/elven-nft-tools.html)
+- [Building NFT related CLI tool with Elrond's JavaScript SDK](https://www.julian.io/articles/elrond-erdjs.html)
 
 also check out useful tools:
 - [elven-tools-cli](https://github.com/juliancwirko/elven-tools-cli)
