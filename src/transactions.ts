@@ -13,7 +13,6 @@ import {
 } from '@elrondnetwork/erdjs';
 import BigNumber from "bignumber.js";
 import { smartContract } from './config';
-import { stringToHex } from './utils';
 
 export interface IssueNFTData {
   tokenName: string;
