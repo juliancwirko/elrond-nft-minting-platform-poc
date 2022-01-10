@@ -25,7 +25,23 @@ const Home: React.FC = () => {
           </Link>
         </Paragraph>
 
-        <Paragraph>Updates:</Paragraph>
+        <Paragraph marginBottom={10}>Updates:</Paragraph>
+        <Paragraph>
+          <Heading marginBottom={10}>elven-tools-cli sneak peek:</Heading> {' '}
+          <Pane marginBottom={30}>
+            <Pane maxWidth={560} width="100%">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/VKVy4Bx-WVQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </Pane>
+          </Pane>
+        </Paragraph>
         <Paragraph>
           <Link href="https://www.julian.io/articles/elrond-erdjs.html">
             - Building NFT related CLI tool with Elrond's JavaScript SDK
@@ -62,20 +78,6 @@ const Home: React.FC = () => {
           displaying already created NFTs and transactions. All done using React
           tools from Elrond.
         </Paragraph>
-
-        <Pane marginBottom={30}>
-          <Pane maxWidth={560} width="100%">
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/EyND_L37Pac"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </Pane>
-        </Pane>
 
         <Paragraph marginBottom={30}>
           You would need to have the devnet address. You can use a couple of
