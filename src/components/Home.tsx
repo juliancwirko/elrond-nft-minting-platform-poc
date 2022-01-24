@@ -27,7 +27,7 @@ const Home: React.FC = () => {
 
         <Paragraph marginBottom={10}>Updates:</Paragraph>
         <Paragraph>
-          <Heading marginBottom={10}>elven-tools-cli sneak peek:</Heading> {' '}
+          <Heading marginBottom={10}>elven-tools-cli sneak peek:</Heading>{' '}
           <Pane marginBottom={30}>
             <Pane maxWidth={560} width="100%">
               <iframe
@@ -54,10 +54,23 @@ const Home: React.FC = () => {
         </Paragraph>
 
         <Paragraph fontWeight="bold">
-          The Smart Contract is in the works...
+          The first version of the Smart Contract is ready! Works like candy
+          machine. The second version will have raffle elements, so better fair
+          distribution.
         </Paragraph>
         <Paragraph marginBottom={30}>
-          For now, check the{' '}
+          Check it out:{' '}
+          <Link href="https://github.com/juliancwirko/elven-nft-minter-sc">
+            elven-nft-minter-sc
+          </Link>{' '}
+          and there is also a CLI tool which will help with deployment and
+          interactions{' '}
+          <Link href="https://github.com/juliancwirko/elven-tools-cli">
+            elven-tools-cli
+          </Link>
+        </Paragraph>
+        <Paragraph marginBottom={30}>
+          Also, check the{' '}
           <Link href="https://github.com/juliancwirko/nft-art-maker">
             nft-art-maker
           </Link>
@@ -65,11 +78,7 @@ const Home: React.FC = () => {
           <Link href="https://github.com/juliancwirko/elven-mint">
             elven-mint
           </Link>{' '}
-          and{' '}
-          <Link href="https://github.com/juliancwirko/elven-tools-cli">
-            elven-tools-cli
-          </Link>
-          . These tools will be beneficial in the process.
+          and.
         </Paragraph>
 
         <Paragraph marginBottom={30}>
