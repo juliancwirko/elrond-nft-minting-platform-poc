@@ -1,6 +1,6 @@
 ## Elven Tools
 
-For more info check: [elven.tools](https://www.elven.tools/)
+For more info check: [https://elrond-nft-minting-platform-poc.netlify.app/](https://elrond-nft-minting-platform-poc.netlify.app/)
 
 - [elven-tools-cli sneak peek!](https://youtu.be/VKVy4Bx-WVQ)
 - [Tools for automated NFT minting](https://www.julian.io/articles/elven-nft-tools.html)
