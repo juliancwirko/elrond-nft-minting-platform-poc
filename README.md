@@ -1,7 +1,8 @@
-## Elven Tools
+## Elrond NFT Minting Platform POC
 
-For more info check: [https://elrond-nft-minting-platform-poc.netlify.app/](https://elrond-nft-minting-platform-poc.netlify.app/)
+**If you are searching for more advanced open source tooling for NFT launches, please check**: [elven.tools](https://www.elven.tools)
 
+- [elrond-nft-minting-platform-poc live app](https://elrond-nft-minting-platform-poc.netlify.app/)
 - [elven-tools-cli sneak peek!](https://youtu.be/VKVy4Bx-WVQ)
 - [Tools for automated NFT minting](https://www.julian.io/articles/elven-nft-tools.html)
 - [Building NFT related CLI tool with Elrond's JavaScript SDK](https://www.julian.io/articles/elrond-erdjs.html)
@@ -13,7 +14,7 @@ also check out useful tools:
 
 This app is a result of learning and playing with [Elrond](https://elrond.com/) blockchain and its [tooling](https://github.com/ElrondNetwork).
 
-Elven Tools is a replication of NFTs creation functionality only on the devnet. Using it, you can issue ESDT tokens for NFTs, create NFTs, displaying already created NFTs and transactions. All done using React tools from Elrond, which are in the early stage, but I am impressed that I could build a lot.
+Elrond NFT Minting Platform POC is a replication of NFTs creation functionality only on the devnet. Using it, you can issue ESDT tokens for NFTs, create NFTs, displaying already created NFTs and transactions. All done using React tools from Elrond, which are in the early stage, but I am impressed that I could build a lot.
 
 ### Local run
 
@@ -26,7 +27,7 @@ Elven Tools is a replication of NFTs creation functionality only on the devnet. 
 
 1. Create your wallet address using the devnet. You can do this here: [devnet-wallet.elrond.com](https://devnet-wallet.elrond.com/)
 2. You would also need some xEGLD. Go to the [Elrond Devnet Faucet](https://r3d4.fr/elrond/devnet) (I guess not an official tool, but it works well). You can also use an official one accessible from the devnet web wallet.
-3. With wallet address and some xEGLD you can start playing with Elven Tools
+3. With wallet address and some xEGLD you can start playing with Elrond NFT Minting Platform POC
 4. Unlock it using web wallet json file and password or Maiar browser extension.
 5. Then you can start creating NFTs.
 
