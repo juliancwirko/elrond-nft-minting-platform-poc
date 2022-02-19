@@ -29,10 +29,14 @@ const AccountTab = () => {
     const signal = controller.signal;
     setPending(true);
     const fetchTransactions = async () => {
-      const response = await fetch(getTransactions(address), { signal });
-      const data = await response.json();
-      if (mounted.current) {
-        setTransactionsList(data);
+      try {
+        const response = await fetch(getTransactions(address), { signal });
+        const data = await response.json();
+        if (mounted.current) {
+          setTransactionsList(data);
+        }
+      } catch {
+      } finally {
         setPending(false);
       }
     };

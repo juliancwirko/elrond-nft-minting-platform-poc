@@ -20,10 +20,14 @@ const NftListTab = () => {
     const signal = controller.signal;
     setPending(true);
     const fetchNfts = async () => {
-      const response = await fetch(getNfts(address), { signal });
-      const data = await response.json();
-      if (mounted.current) {
-        setNftsList(data);
+      try {
+        const response = await fetch(getNfts(address), { signal });
+        const data = await response.json();
+        if (mounted.current) {
+          setNftsList(data);
+        }
+      } catch {
+      } finally {
         setPending(false);
       }
     };
