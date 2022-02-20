@@ -12,7 +12,12 @@ const Home: React.FC = () => {
   return (
     <MainLayout>
       <Pane backgroundColor="white" elevation={1} padding={30}>
-        <Pane display="flex" alignItems="center" justifyContent="space-between" marginBottom={40}>
+        <Pane
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+          marginBottom={40}
+        >
           <Paragraph marginBottom={30}>
             This app is a result of learning and playing with{' '}
             <Link href="https://elrond.com/">Elrond</Link> blockchain and its{' '}
@@ -20,12 +25,12 @@ const Home: React.FC = () => {
           </Paragraph>
 
           <Paragraph marginBottom={30}>
-            <Link
-              href="https://github.com/juliancwirko/elrond-nft-minting-platform-poc"
-            >
+            <Link href="https://github.com/juliancwirko/elrond-nft-minting-platform-poc">
               Github
             </Link>
-            <Button marginLeft={20} onClick={unlock}>Unlock Elven Tools</Button>
+            <Button marginLeft={20} onClick={unlock}>
+              Unlock Elrond NFT POC
+            </Button>
           </Paragraph>
         </Pane>
 

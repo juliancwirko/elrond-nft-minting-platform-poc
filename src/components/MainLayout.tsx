@@ -59,7 +59,7 @@ const MainLayout: React.FC = ({ children }) => {
                 display="flex"
                 alignItems="center"
               >
-                Elven Tools
+                Elrond NFT POC
               </Heading>
               {!smallRes && (
                 <StatusIndicator color="success" marginLeft={20}>

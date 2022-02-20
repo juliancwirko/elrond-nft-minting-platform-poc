@@ -48,6 +48,8 @@ const AccountTab = () => {
     };
   }, [address]);
 
+  console.log(transactionsList);
+
   return (
     <>
       <Pane display="flex" flexDirection={smallRes ? 'column' : 'row'}>
@@ -178,7 +180,11 @@ const AccountTab = () => {
                             wordWrap="break-word"
                             whiteSpace="normal"
                           >
-                            <Text>{atob(transaction.data)}</Text>
+                            <Text>
+                              {transaction.data
+                                ? atob(transaction.data)
+                                : 'N/A'}
+                            </Text>
                           </Pane>
                           <Pane marginBottom={10}>
                             <Text>
@@ -197,7 +203,7 @@ const AccountTab = () => {
                                   wordWrap="break-word"
                                   whiteSpace="normal"
                                 >
-                                  {atob(sc.data)}
+                                  {sc.data ? atob(sc.data) : null}
                                 </Pane>
                               )
                             )}

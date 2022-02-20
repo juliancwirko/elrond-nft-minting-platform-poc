@@ -26,14 +26,16 @@ const FeedbackBox: React.FC<FeedbackBoxProps> = ({ setTabSelectedIndex }) => {
     (scResults: any) => {
       if (scResults?.length > 1) {
         const setRoleObj = scResults.find((item: any) =>
-          atob(item.data).includes('ESDTSetRole')
+          item.data ? atob(item.data).includes('ESDTSetRole') : false
         );
         return {
-          esdtSetRoleToken: hexToString(atob(setRoleObj.data).split('@')?.[1]),
+          esdtSetRoleToken: setRoleObj.data
+            ? hexToString(atob(setRoleObj.data).split('@')?.[1])
+            : '',
           issuanceTypeToken: '',
         };
       }
-      const scData = atob(scResults?.[0]?.data);
+      const scData = scResults?.[0]?.data ? atob(scResults[0].data) : '';
       const scDataSplit = scData.split('@');
       if (
         hexToString(scDataSplit?.[1]) === 'ok' &&
