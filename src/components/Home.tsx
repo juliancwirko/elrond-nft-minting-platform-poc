@@ -43,10 +43,15 @@ const Home: React.FC = () => {
             marginRight="auto"
             width="100%"
           >
-            'How to run NFT collection on the Elrond blockchain' - from
-            preparing the assets through Smart Contract deployment to buying and
-            minting with the CLI tool.
-          </Heading>{' '}
+            This app is just a POC without using the Smart Contract. It is also
+            built as a quick test, and for learning purposes, so it isn't
+            perfect. It also uses an older and deprecated 'dapp' library. Search
+            for the new one: 'dapp-core'. I am working on a new NextJS based
+            template. Stay tuned. In the meantime check{' '}<br/>
+            👇 <Link href="https://www.elven.tools">
+              Elven Tools Smart Contract and CLI
+            </Link> 👇
+          </Heading>
           <Pane marginBottom={30}>
             <Pane
               maxWidth={800}
