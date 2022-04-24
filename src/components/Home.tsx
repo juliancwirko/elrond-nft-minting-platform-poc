@@ -46,11 +46,13 @@ const Home: React.FC = () => {
             This app is just a POC without using the Smart Contract. It is also
             built as a quick test, and for learning purposes, so it isn't
             perfect. It also uses an older and deprecated 'dapp' library. Search
-            for the new one: 'dapp-core'. I am working on a new NextJS based
-            template. Stay tuned. In the meantime check{' '}<br/>
-            👇 <Link href="https://www.elven.tools">
+            for the new one: 'dapp-core' or you can check complete minter dapp
+            and more here: <br />
+            👇{' '}
+            <Link href="https://www.elven.tools">
               Elven Tools Smart Contract and CLI
-            </Link> 👇
+            </Link>{' '}
+            👇
           </Heading>
           <Pane marginBottom={30}>
             <Pane
@@ -64,6 +66,25 @@ const Home: React.FC = () => {
                 width="100%"
                 height="450"
                 src="https://www.youtube.com/embed/resGP6a7_34"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </Pane>
+          </Pane>
+          <Pane marginBottom={30}>
+            <Pane
+              maxWidth={800}
+              marginTop={40}
+              marginLeft="auto"
+              marginRight="auto"
+              width="100%"
+            >
+              <iframe
+                width="100%"
+                height="450"
+                src="https://www.youtube.com/embed/ATSxD3mD4dc"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
