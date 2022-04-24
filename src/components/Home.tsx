@@ -93,6 +93,11 @@ const Home: React.FC = () => {
             </Pane>
           </Pane>
         </Paragraph>
+        <Paragraph textAlign="center">
+          <Link href="https://dapp-demo.elven.tools">
+            Elrond Minter Dapp Demo
+          </Link>
+        </Paragraph>
         <Paragraph marginTop={40}>
           <Heading marginBottom={10}>More articles and tools:</Heading>
         </Paragraph>
