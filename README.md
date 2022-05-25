@@ -2,6 +2,8 @@
 
 **Development on this project has been stopped. Check why here: https://github.com/juliancwirko/elrond-nft-minting-platform-poc/issues/3#issuecomment-1136872878**
 
+**General open source tools:** [Elrond's Dev Guild](https://github.com/ElrondDevGuild)
+
 **If you are searching for more advanced open source tooling for NFT launches, please check**: [elven.tools](https://www.elven.tools)
 
 - [elrond-nft-minting-platform-poc live app](https://elrond-nft-minting-platform-poc.netlify.app/)
