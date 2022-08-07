@@ -7,9 +7,8 @@
 **If you are searching for more advanced open source tooling for NFT launches, please check**: [elven.tools](https://www.elven.tools)
 
 - [elrond-nft-minting-platform-poc live app](https://elrond-nft-minting-platform-poc.netlify.app/)
-- [elven-tools-cli sneak peek!](https://youtu.be/VKVy4Bx-WVQ)
-- [Tools for automated NFT minting](https://www.julian.io/articles/elven-nft-tools.html)
-- [Building NFT related CLI tool with Elrond's JavaScript SDK](https://www.julian.io/articles/elrond-erdjs.html)
+- [Elven Tools intro](https://www.youtube.com/watch?v=Jou5jn8PFz8)
+- [PFP NFTs on the Elrond blockchain](https://www.julian.io/articles/pfp-nft-elrond-blockchain.html)
 
 also check out useful tools:
 - [elven-tools-cli](https://github.com/juliancwirko/elven-tools-cli)
