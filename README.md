@@ -36,7 +36,7 @@ Elrond NFT Minting Platform POC is a replication of NFTs creation functionality 
 
 ### If you want to contact me
 - julian.cwirko@gmail.com
-- [Twitter](twitter.com/theJulianIo)
+- [Twitter](https://twitter.com/theJulianIo)
 
 ### Also, check out my other learning resources and tools regarding Elrond blockchain
 
